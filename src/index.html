@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Wirebits Token ICO Sale</title>
+		<!-- Bootstrap CSS -->
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Arimo|Titillium+Web" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body data-spy="scroll" data-target=".navbar" data-offset="50" id="top">
+		<header>
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="container-fluid red">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 text-center pa-1">
+								<p class="pt-1"><small>Special offer for the first 1000 Token sales could go here. <a href="#" style="color:white;font-weight:600;">Click here for more information</a></small></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container py-2">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="/"><img src="images/logo.png"></a>
+					</div>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+						<li><a href="#1">Buy Now</a></li>
+						<li><a href="#2">About Bywire</a></li>
+						<li><a href="#3">What are Wirebits?</a></li>
+						<li><a href="#4">Token Sale</a></li>
+						<li><a href="#5">Team</a></li>
+						<li><a href="#6">Timeline</a></li>
+						<li><a href="#7">Partners</a></li>
+            <li><a href="#8">FAQs</a></li>
+						<!--<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+							  <li><a href="#">Action</a></li>
+							  <li><a href="#">Another action</a></li>
+							  <li><a href="#">Something else here</a></li>
+							  <li role="separator" class="divider"></li>
+							  <li><a href="#">Separated link</a></li>
+							  <li role="separator" class="divider"></li>
+							  <li><a href="#">One more separated link</a></li>
+							</ul>
+							</li>
+							</ul> -->
+						<li><a href="http://www.bywire.news/" target="_blank">Bywire.news</a></li>
+					</div>
+					<!-- /.navbar-collapse -->
+				</div>
+				<!-- /.container-fluid -->
+			</nav>
+		</header>
+		<section id="1">
+			<div class="container-fluid blue"  >
+				<div class="container pb-5">
+					<div class="row mt-xl-header">
+						<div class="col-md-6 col-sm-12 pa-3">
+							<div id="loader" class="mt-2">
+								<p class="text-center">Loading...</p>
+							</div>
+							<p><small>Token status: <strong>LIVE VERIFIED</strong><span class="blink live-circle"></span></small></p>
+							<h1 class="title">EXCLUSIVE WIREBITS ICO TOKEN SALE</h1>
+							<p class="py-3 lead">
+								Introducing "WIREBITS Token" (WBITS)!
+								Token price is <strong><span class="token-price"></span></strong> Ether. You currently have <span class="dapp-balance"></span>&nbsp;WBITS in your MetaMask or browser wallet.
+							</p>
+							<h1 class="title">£10,524,124 <small>raised</small></h1>
+							<form onSubmit="App.buyTokens(); return false;" role="form" id="content" style="display: none;">
+								<div class="form-group">
+									<div class="input-group">
+										<input id="numberOfTokens" class="form-control input-lg" type="number" name="number" value="1" min="1" pattern="[0-9]">
+										</input>
+										<span class="input-group-btn">
+										<button type="submit" class="btn btn-danger btn-lg"><i class="fas fa-coins"></i> Buy Tokens</button>
+										</span>
+									</div>
+								</div>
+							</form>
+							<br>
+							<hr>
+							<p id="accountAddress" class="hidden-sm hidden-xs"></p>
+						</div>
+						<div class="col-md-1"></div>
+						<div class="col-md-5 col-sm-12 pa-3  text-center">
+							<p><small>Phase I Token sale time remaining</p>
+							<h1 class="title" id="demo"></h1>
+							<div class="progress mt-5">
+								<div id="progress" class="progress-bar progress-bar-striped active" aria-valuemin="0" aria-valuemax="100">
+								</div>
+							</div>
+							<p ><strong><span class="tokens-sold"></span></strong> / <span class="tokens-available"></span> tokens sold</p>
+							<p class="lead mt-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+							<table class="table mt-5 text-center">
+								<thead class="text-center">
+									<tr>
+										<th class="text-center">Phase </th>
+										<th class="text-center">Bonus</th>
+										<th class="text-center">Tokens available</th>
+										<th class="text-center">Price per Token</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Phase I Aug 18</td>
+										<td>50%</td>
+										<td>1,500,000</td>
+										<td>$0.80 / ETH 0.001</td>
+									</tr>
+									<tr>
+										<td>Phase II Oct 18</td>
+										<td>25%</td>
+										<td>2,000,000</td>
+										<td>$0.80 / ETH 0.001</td>
+									</tr>
+									<tr>
+										<td>Phase III Dec 18</td>
+										<td>10%</td>
+										<td>4,000,000</td>
+										<td>$0.80 / ETH 0.001</td>
+									</tr>
+								</tbody>
+							</table>
+							<!-- Trigger the modal with a button -->
+							<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal"><i class="fas fa-video"></i> Play video</button>
+							<!-- Modal -->
+							<div id="myModal" class="modal fade" role="dialog">
+								<div class="modal-dialog">
+									<!-- Modal content-->
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal">&times;</button>
+											<h4 class="modal-title">Modal Header</h4>
+										</div>
+										<div class="modal-body">
+											<iframe width="560" height="315" src="https://www.youtube.com/embed/Pgln9L5Y7sQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--col-md-6-->
+					</div>
+					<!--row-->
+				</div>
+				<!--container-->
+			</div>
+			<!--container-fluid-->
+		</section>
+		<section id="2">
+			<div class="container-fluid olor-change-3x mt-divide" >
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 p-3 text-center">
+							<h1 class="title">About Bywire</h1>
+							<hr />
+						</div>
+					</div>
+					<div class="row mt-5">
+						<div class="col-md-6 pa-3">
+							<p class="lead">ByWire is a disruptive organisation that is revolutionising the news industry by utilising the power of the blockchain, cryptocurrencies and smart contracts.</p>
+							<p class="lead">Building upon lessons learned from political activism, publishing, journalism and psephology, our team understands from experience the need for urgent and permanent change. </p>
+							<p class="lead">We feel our vision of independence, attributability and decentralisation is of the moment.
+							<p class="lead">We want to represent readers, publishers and creators alike, broker content, and return profitability, while destroying corruption and removing conflicts from the ways in which our news and media are funded. </p>
+							<p class="lead">ByWire.news will focus on delivering a better connected, truthful world, free from the control of corporate paymasters, vested interests, corrupt governments, state-supported violence and tyranny. </p>
+						</div>
+						<div class="col-md-1 text-center pa-3"></div>
+						<div class="col-md-5 text-center pa-3 mt-5">
+							<img class="gif img-responsive" src="https://stumblingintheshadowsofgiants.files.wordpress.com/2013/03/the-old-wooden-press.jpg">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="3">
+			<div class="container-fluid olor-change-3x mt-divide">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 text-center pa-3" >
+							<h1 class="title">What are Wirebits?</h1>
+							<hr />
+            </div>
+          </div>
+          <div class="row">
+
+
+						<div class="col-md-5 text-center pa-3 mt-5">
+							<img class="gif img-responsive" src="https://coinweez.com/wp-content/uploads/2018/01/fszsfsf.jpg">
+						</div>
+            <div class="col-md-1 text-center pa-3"></div>
+            <div class="col-md-6 pa-3">
+              <p class="lead">Wirebits will act as the main payment token on both the Ethereum and EOS blockchains, which shall facilitate: both the private and public ICO launches, microtipping, investigative campaign donations, rewards and remuneration. </p>
+							<p>Creating our ecosystem on EOS, we can innovate a new way of funding the news; at its heart a decentralised and autonomous self governing community. </p>
+							<p>With the use of microtipping, we can encourage our consumers to ‘tip’ their favourite news content (articles, creators, investigative campaigns, podcasts or videos), providing a consistent, ad-free route to revenue. One that is controlled by the reader.</p>
+							<p>We already know that quality, in depth content is more likely to be tipped, so let's build a market economy that rejects clickbait, confirmation bias silos and fake news. </p>
+							<p>ByWire readers can be paid by publishers and ByWire.news to consume content, paid to engage with content and paid to share and promote content that they believe-in. Readers will in-turn reward both the publishers and authors of said work with tips. </p>
+							<p>This would mean absolute data privacy for our consumers. If we are not tracking you to monitiese you, then we only need to know what you want us to know. </p>
+            </div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section id="4">
+
+			<div class="container-fluid redbk mt-divide pb-xl">
+				<div class="container">
+					<div class="row mt-5">
+						<div class="col-md-8 col-md-offset-2 text-center pa-3" >
+							<h1 class="title">Wirebits Token Sale</h1>
+							<hr class="white" />
+							<p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 pa-3">
+							<img src="images/schedule-2-3.png" class="img-responsive gif">
+						</div>
+					</div>
+					<div class="row my-5">
+						<div class="col-md-7 pa-3">
+							<h2>Title goes here</h2>
+							<p class="my-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+						</div>
+						<div class="col-md-5 pa-3">
+
+							<img src="images/chart.png" class="img-responsive gif">
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+
+		<section id="5">
+			<div class="container-fluid  mt-divide">
+				<div class="container">
+					<div class="row mt-5">
+						<div class="col-md-12 text-center pa-3" >
+							<h1 class="title">Team</h1>
+							<hr />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3">
+							<div class="card">
+								<img src="images/img_avatar.png" alt="Avatar" style="width:100%">
+								<div class="container">
+									<h4><b>Thomas Barlow</b></h4>
+									<p>Chair</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="card">
+								<img src="images/img_avatar.png" alt="Avatar" style="width:100%">
+								<div class="container">
+									<h4><b>Michael O’Sullivan</b></h4>
+									<p>CEO</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="card">
+								<img src="images/img_avatar.png" alt="Avatar" style="width:100%">
+								<div class="container">
+									<h4><b>Teun Gautier</b></h4>
+									<p>COO </p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="card">
+								<img src="images/img_avatar.png" alt="Avatar" style="width:100%">
+								<div class="container">
+									<h4><b>Peter Jukes</b></h4>
+									<p>Editor-in-Chief </p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row mt-5">
+						<div class="col-md-3">
+							<div class="card">
+								<img src="images/img_avatar.png" alt="Avatar" style="width:100%">
+								<div class="container">
+									<h4><b>Jay Smith</b></h4>
+									<p>Chief Treasurer</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="card">
+								<img src="images/img_avatar.png" alt="Avatar" style="width:100%">
+								<div class="container">
+									<h4><b>Oshi Okomilo</b></h4>
+									<p>CMO</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="card">
+								<img src="images/img_avatar.png" alt="Avatar" style="width:100%">
+								<div class="container">
+									<h4><b>Natasha Josette</b></h4>
+									<p>Head of Production</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+              <div class="card">
+								<img src="images/img_avatar.png" alt="Avatar" style="width:100%">
+								<div class="container">
+									<h4><b>COULD THISBE YOU?</b></h4>
+									<p><a href="#">Send us your CV/Resume</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="6">
+			<div class="container-fluid timeline-bk color-change-3x mt-divide pb-xl">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 text-center pa-3" >
+							<h1 class="title white py-5">Timeline</h1>
+							<hr class="white" />
+							<div class="timeline mt-xl">
+								<div class="container-timeline left">
+									<div class="content-timeline">
+										<h2>2017</h2>
+										<p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+									</div>
+								</div>
+								<div class="container-timeline right">
+									<div class="content-timeline">
+										<h2>2016</h2>
+										<p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+									</div>
+								</div>
+								<div class="container-timeline left">
+									<div class="content-timeline">
+										<h2>2015</h2>
+										<p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+									</div>
+								</div>
+								<div class="container-timeline right">
+									<div class="content-timeline">
+										<h2>2012</h2>
+										<p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+									</div>
+								</div>
+								<div class="container-timeline left">
+									<div class="content-timeline">
+										<h2>2011</h2>
+										<p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+									</div>
+								</div>
+								<div class="container-timeline right">
+									<div class="content-timeline">
+										<h2>2007</h2>
+										<p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="7">
+			<div class="container-fluid  mt-divide">
+				<div class="container">
+					<div class="row mt-5">
+						<div class="col-md-12 text-center pa-3" >
+							<h1 class="title">Partners</h1>
+							<hr />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3 pa-2">
+							<img src="http://placehold.it/400x250" class="img-responsive gif">
+						</div>
+						<div class="col-md-3 pa-2">
+							<img src="http://placehold.it/400x250" class="img-responsive gif">
+						</div>
+						<div class="col-md-3 pa-2">
+							<img src="http://placehold.it/400x250" class="img-responsive gif">
+						</div>
+						<div class="col-md-3 pa-2">
+							<img src="http://placehold.it/400x250" class="img-responsive gif">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3 pa-2">
+							<img src="http://placehold.it/400x250" class="img-responsive gif">
+						</div>
+						<div class="col-md-3 pa-2">
+							<img src="http://placehold.it/400x250" class="img-responsive gif">
+						</div>
+						<div class="col-md-3 pa-2">
+							<img src="http://placehold.it/400x250" class="img-responsive gif">
+						</div>
+						<div class="col-md-3 pa-2">
+							<img src="http://placehold.it/400x250" class="img-responsive gif">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+    <section id="8">
+			<div class="container-fluid mt-divide">
+				<div class="container">
+					<div class="row mt-5">
+						<div class="col-md-12 text-center pa-3" >
+							<h1 class="title">FAQs</h1>
+							<hr />
+						</div>
+					</div>
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2 pa-3">
+              <div class="container ">
+    <div class="panel-group" id="faqAccordion">
+        <div class="panel panel-default ">
+            <div class="panel-heading accordion-toggle question-toggle collapsed" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question0">
+                 <h4 class="panel-title">
+                    <a href="#p" class="ing">Q: What is Lorem Ipsum?</a>
+              </h4>
+
+            </div>
+            <div id="question0" class="panel-collapse collapse" style="height: 0px;">
+                <div class="panel-body">
+                     <h5><span class="label label-primary">Answer</span></h5>
+
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five <a href="http://jquery2dotnet.com/" class="label label-success">http://jquery2dotnet.com/</a> centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default ">
+            <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question1">
+                 <h4 class="panel-title">
+                    <a href="#p" class="ing">Q: Why do we use it?</a>
+              </h4>
+
+            </div>
+            <div id="question1" class="panel-collapse collapse" style="height: 0px;">
+                <div class="panel-body">
+                     <h5><span class="label label-primary">Answer</span></h5>
+
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default ">
+            <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question2">
+                 <h4 class="panel-title">
+                    <a href="#p" class="ing">Q: Where does it come from?</a>
+              </h4>
+
+            </div>
+            <div id="question2" class="panel-collapse collapse" style="height: 0px;">
+                <div class="panel-body">
+                     <h5><span class="label label-primary">Answer</span></h5>
+
+                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default ">
+            <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question3">
+                 <h4 class="panel-title">
+                    <a href="#p" class="ing">Q: Where can I get some?</a>
+              </h4>
+
+            </div>
+            <div id="question3" class="panel-collapse collapse" style="height: 0px;">
+                <div class="panel-body">
+                     <h5><span class="label label-primary">Answer</span></h5>
+
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--/panel-group-->
+</div>
+            </div>
+          </div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class="container-fluid red mt-xl">
+				<div class="container">
+					<div class="row mt-3">
+						<div class="col-md-6 text-left">
+							<p><small>© 2018 Bywire and Wirebits. All rights reserved. 35 Little Russell St, Bloomsbury, London WC1A 2HH</small></p>
+						</div>
+						<div class="col-md-6 text-right">
+							<p class="white"><small><a class="mx-3 white" href="#">Privacy</a> | <a class="mx-3 white" href="#">Terms</a> | <a class="mx-3 white" href="#">Refunds</a> | <a class="mx-3 white" href="#">Privacy</a> | <a class="mx-3 white" href="#"> Blog</a> | <a class="mx-3 white" href="#">CoinListing</a> | <a class="mx-3 white" href="#top">back to top <i class="fas fa-chevron-up"></i></a><small></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="js/web3.min.js"></script>
+		<script src="js/truffle-contract.min.js"></script>
+		<script src="js/app.js"></script>
+		<script>
+			// Set the date we're counting down to
+			var countDownDate = new Date("Sep 5, 2018 15:37:25").getTime();
+
+			// Update the count down every 1 second
+			var x = setInterval(function() {
+
+			// Get todays date and time
+			var now = new Date().getTime();
+
+			// Find the distance between now an the count down date
+			var distance = countDownDate - now;
+
+			// Time calculations for days, hours, minutes and seconds
+			var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+			// Display the result in the element with id="demo"
+			document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+			+ minutes + "m " + seconds + "s ";
+
+			// If the count down is finished, write some text
+			if (distance < 0) {
+			clearInterval(x);
+			document.getElementById("demo").innerHTML = "EXPIRED";
+			}
+			}, 1000);
+
+
+		</script>
+		<script type="text/javascript">
+			//Smooth Scrol To use: remember to use FULL Version of jquery not mini,
+
+
+			// Select all links with hashes
+			$('a[href*="#"]')
+			// Remove links that don't actually link to anything
+			.not('[href="#"]')
+			.not('[href="#0"]')
+			.click(function(event) {
+			// On-page links
+			if (
+			location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+			&&
+			location.hostname == this.hostname
+			) {
+			// Figure out element to scroll to
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+			// Does a scroll target exist?
+			if (target.length) {
+			// Only prevent default if animation is actually gonna happen
+			event.preventDefault();
+			$('html, body').animate({
+			  scrollTop: target.offset().top
+			}, 1000, function() {
+			  // Callback after animation
+			  // Must change focus!
+			  var $target = $(target);
+			  $target.focus();
+			  if ($target.is(":focus")) { // Checking if the target was focused
+			    return false;
+			  } else {
+			    $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+			    $target.focus(); // Set focus again
+			  };
+			});
+			}
+			}
+			});
+
+
+		</script>
+		<script type="text/javascript">
+			var sections = $('section')
+			, nav = $('nav')
+			, nav_height = nav.outerHeight();
+
+			$(window).on('scroll', function () {
+			var cur_pos = $(this).scrollTop();
+
+			sections.each(function() {
+			var top = $(this).offset().top - nav_height,
+			  bottom = top + $(this).outerHeight();
+
+			if (cur_pos >= top && cur_pos <= bottom) {
+			nav.find('a').removeClass('active');
+			sections.removeClass('active');
+
+			$(this).addClass('active');
+			nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+			}
+			});
+			});
+		</script>
+		<script type="text/javascript">
+			nav.find('a').on('click', function () {
+			var $el = $(this)
+			, id = $el.attr('href');
+
+			$('html, body').animate({
+			scrollTop: $(id).offset().top - nav_height
+			}, 500);
+
+			return false;
+			});
+		</script>
+	</body>
+</html>
